@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>FILMBOX - Create your account</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
     <div class="page">
@@ -70,16 +70,6 @@
             />
           </div>
 
-          <div class="form-group">
-            <label for="confirm-password"> Re-enter Password </label>
-            <input
-              type="password"
-              id="confirm-password"
-              placeholder="••••••••••"
-              required
-            />
-          </div>
-
           <!-- GENDER -->
           <div class="form-group">
             <label>Gender</label>
@@ -106,11 +96,9 @@
           <div class="form-group">
             <label for="birthdate">Birthdate</label>
             <input
-              type="text"
+              type="date"
               id="birthdate"
               placeholder="MM / DD / YYYY"
-              onfocus="this.type = 'date'"
-              onblur="if (!this.value) this.type = 'text';"
             />
           </div>
 
@@ -145,32 +133,32 @@
 
             <div class="genres">
               <label>
-                <input type="checkbox" checked />
+                <input type="checkbox" unchecked />
                 Action
               </label>
 
               <label>
-                <input type="checkbox" checked />
+                <input type="checkbox" unchecked />
                 Sci-Fi
               </label>
 
               <label>
-                <input type="checkbox" checked />
+                <input type="checkbox" unchecked />
                 Drama
               </label>
 
               <label>
-                <input type="checkbox" checked />
+                <input type="checkbox" unchecked />
                 Comedy
               </label>
 
               <label>
-                <input type="checkbox" checked />
+                <input type="checkbox" unchecked />
                 Horror
               </label>
 
               <label>
-                <input type="checkbox" checked />
+                <input type="checkbox" unchecked />
                 Documentary
               </label>
             </div>
@@ -195,25 +183,5 @@
         </div>
       </footer>
     </div>
-
-    <script>
-      const form = document.querySelector(".form-card");
-
-      form.addEventListener("submit", function (event) {
-        event.preventDefault();
-
-        const password = document.getElementById("password").value;
-
-        const confirmPassword =
-          document.getElementById("confirm-password").value;
-
-        if (password !== confirmPassword) {
-          alert("Passwords do not match!");
-          return;
-        }
-
-        alert("Account form submitted successfully!");
-      });
-    </script>
   </body>
 </html>
