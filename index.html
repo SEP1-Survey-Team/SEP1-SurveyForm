@@ -66,8 +66,15 @@
               type="password"
               id="password"
               placeholder="••••••••••"
+              minlength="8"
+              pattern="(?=.*[A-Z])(?=.*[0-9]).{8,}"
+              title="Use at least 8 characters, including one uppercase letter and one number."
+              aria-describedby="password-requirements"
               required
             />
+            <small id="password-requirements">
+              At least 8 characters, including one uppercase letter and one number.
+            </small>
           </div>
 
           <!-- GENDER -->
