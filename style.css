@@ -1,0 +1,437 @@
+/* GENERAL SETTINGS */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --purple: #4815b8;
+  --purple-dark: #36108f;
+  --cream: #f3f0df;
+  --text: #483a72;
+  --white: #ffffff;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--text);
+  background: #ffffff;
+}
+
+/* PAGE */
+
+.page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* HEADER */
+
+.header {
+  height: 65px;
+  padding: 0 25px;
+  background: var(--cream);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-icon {
+  width: 34px;
+  height: 34px;
+  border-radius: 9px;
+
+  background: var(--purple);
+  color: white;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.logo-text {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.logo-text strong {
+  font-size: 15px;
+  letter-spacing: 0.5px;
+}
+
+.logo-text span {
+  font-size: 9px;
+  letter-spacing: 1.5px;
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.navigation a {
+  text-decoration: none;
+  font-size: 12px;
+  padding: 9px 17px;
+  border-radius: 20px;
+}
+
+.login {
+  background: white;
+  color: var(--purple);
+}
+
+.help {
+  background: var(--purple);
+  color: white;
+}
+
+/* MAIN PURPLE BACKGROUND */
+
+.main {
+  flex: 1;
+  background: radial-gradient(
+    ellipse at 50% 45%,
+    #6734d0 0%,
+    #501ac0 48%,
+    #37108c 100%
+  );
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 55px 20px;
+}
+
+/* FORM CARD */
+
+.form-card {
+  width: 100%;
+  max-width: 540px;
+
+  background: var(--cream);
+  border-radius: 20px;
+
+  padding: 30px 36px 25px;
+
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.form-card h1 {
+  font-size: 27px;
+  font-weight: 700;
+  color: #493478;
+  margin-bottom: 23px;
+}
+
+/* FORM ELEMENTS */
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 14px;
+}
+
+.form-group > label {
+  font-size: 11px;
+  font-weight: 500;
+  margin-bottom: 6px;
+  color: #62557b;
+}
+
+.name-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.name-row .form-group {
+  min-width: 0;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="date"],
+select,
+textarea {
+  width: 100%;
+  border: 1px solid #ebe7ef;
+  border-radius: 7px;
+
+  background: #ffffff;
+  color: #554477;
+
+  padding: 12px 13px;
+  font-family: inherit;
+  font-size: 12px;
+
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #9b8bab;
+  opacity: 1;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: #7b4cdd;
+}
+
+textarea {
+  min-height: 90px;
+  resize: vertical;
+}
+
+/* GENDER */
+
+.gender-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.gender-option {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+
+  min-width: 90px;
+  padding: 9px 12px;
+
+  border-radius: 7px;
+  background: white;
+  color: #67577c;
+
+  font-size: 11px;
+  cursor: pointer;
+}
+
+.gender-option input {
+  accent-color: var(--purple);
+  cursor: pointer;
+}
+
+/* DECADE SELECT */
+
+select {
+  appearance: none;
+  cursor: pointer;
+
+  background-color: white;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='none' stroke='%23554477' stroke-width='2' viewBox='0 0 24 24'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  padding-right: 35px;
+}
+
+/* FAVORITE GENRES */
+
+.genres {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px 12px;
+}
+
+.genres label {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+
+  color: #6646a4;
+  font-size: 11px;
+  cursor: pointer;
+}
+
+.genres input[type="checkbox"] {
+  width: 12px;
+  height: 12px;
+  accent-color: var(--purple);
+  cursor: pointer;
+}
+
+/* SUBMIT BUTTON */
+
+.submit-btn {
+  display: block;
+  width: 100%;
+  margin-top: 18px;
+  padding: 14px;
+
+  background: var(--purple);
+  color: white;
+
+  border: none;
+  border-radius: 8px;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.submit-btn:hover {
+  background: var(--purple-dark);
+}
+
+/* FOOTER */
+
+.footer {
+  min-height: 65px;
+  padding: 14px 25px;
+
+  background: var(--cream);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.footer-left strong {
+  font-size: 12px;
+}
+
+.footer-left p {
+  margin-top: 5px;
+  font-size: 10px;
+  color: #8d829b;
+}
+
+.footer-links {
+  display: flex;
+  gap: 18px;
+}
+
+.footer-links a {
+  font-size: 11px;
+  color: #65547e;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+/* TABLET */
+
+@media (max-width: 768px) {
+  .main {
+    padding: 35px 16px;
+  }
+
+  .form-card {
+    max-width: 440px;
+    padding: 28px 25px;
+  }
+
+  .form-card h1 {
+    font-size: 24px;
+  }
+}
+
+/* MOBILE */
+
+@media (max-width: 480px) {
+  .header {
+    height: 65px;
+    padding: 0 15px;
+  }
+
+  .logo-icon {
+    width: 30px;
+    height: 30px;
+  }
+
+  .logo-text strong {
+    font-size: 12px;
+  }
+
+  .logo-text span {
+    font-size: 7px;
+  }
+
+  .navigation {
+    gap: 7px;
+  }
+
+  .navigation a {
+    font-size: 10px;
+    padding: 8px 12px;
+  }
+
+  .main {
+    padding: 22px 12px;
+    align-items: flex-start;
+  }
+
+  .form-card {
+    max-width: 100%;
+    padding: 24px 17px;
+    border-radius: 16px;
+  }
+
+  .form-card h1 {
+    font-size: 22px;
+    margin-bottom: 20px;
+  }
+
+  .name-row {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .form-group {
+    margin-bottom: 14px;
+  }
+
+  .gender-options {
+    gap: 6px;
+  }
+
+  .gender-option {
+    flex: 1;
+    min-width: 0;
+    padding: 9px 7px;
+    gap: 5px;
+  }
+
+  .genres {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 13px 8px;
+  }
+
+  .footer {
+    padding: 16px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .footer-links {
+    gap: 15px;
+  }
+}
