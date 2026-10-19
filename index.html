@@ -106,11 +106,9 @@
           <div class="form-group">
             <label for="birthdate">Birthdate</label>
             <input
-              type="text"
+              type="date"
               id="birthdate"
-              placeholder="MM / DD / YYYY"
-              onfocus="this.type = 'date'"
-              onblur="if (!this.value) this.type = 'text';"
+              placeholder="DD/MM/YYYY"
             />
           </div>
 
@@ -195,25 +193,5 @@
         </div>
       </footer>
     </div>
-
-    <script>
-      const form = document.querySelector(".form-card");
-
-      form.addEventListener("submit", function (event) {
-        event.preventDefault();
-
-        const password = document.getElementById("password").value;
-
-        const confirmPassword =
-          document.getElementById("confirm-password").value;
-
-        if (password !== confirmPassword) {
-          alert("Passwords do not match!");
-          return;
-        }
-
-        alert("Account form submitted successfully!");
-      });
-    </script>
   </body>
 </html>
